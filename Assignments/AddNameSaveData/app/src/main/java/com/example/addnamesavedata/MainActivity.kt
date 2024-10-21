@@ -8,10 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 
-
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
-
 
     @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,10 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             viewModel.addNames(input.text.toString())
-
             results.text = viewModel.getResults()
-
-
             input.setText("")
 
         }
