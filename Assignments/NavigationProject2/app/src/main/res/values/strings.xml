@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Navigation Project 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstfragbtn1">firstFragBtn1</string>
+    <string name="firstfragbtn2">firstFragBtn2</string>
+    <string name="firstfraginput">firstFragInput</string>
+    <string name="firstfragtitle">firstFragTitle</string>
+    <string name="secondfragtitle">secondFragTitle</string>
+    <string name="secondfragtextview">secondFragTextview</string>
+    <string name="secondfragbtn">secondFragBtn</string>
+</resources>
