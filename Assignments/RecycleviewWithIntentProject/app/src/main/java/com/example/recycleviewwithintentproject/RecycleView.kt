@@ -1,9 +1,11 @@
-package com.example.recycleviewproject
+package com.example.recycleviewwithintentproject
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recycleviewproject.databinding.CardLayoutBinding
+import com.example.recycleviewwithintentproject.databinding.CardLayoutBinding
 import com.google.android.material.snackbar.Snackbar
 
 class RecyclerAdapter(private val viewModel: MainViewModel) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -16,9 +18,12 @@ class RecyclerAdapter(private val viewModel: MainViewModel) : RecyclerView.Adapt
             itemView.setOnClickListener { v ->
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) { // Check if position is valid
-                    Snackbar.make(v, "Click detected on item $position", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null)
-                        .show()
+
+                    val intent = Intent(v.getContext(), SecondActivity::class.java).apply {
+                        putExtra("input1", binding.itemTitle.text.toString())
+                        putExtra("input2", binding.itemDetail.text.toString())
+                        putExtra("input3", R.drawable.android_image_3)            }
+                    v.getContext().startActivity(intent);
                 }
             }
         }
