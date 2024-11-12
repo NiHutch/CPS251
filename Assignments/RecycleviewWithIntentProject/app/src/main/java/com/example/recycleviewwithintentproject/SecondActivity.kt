@@ -22,9 +22,8 @@ class SecondActivity : AppCompatActivity() {
         binding.textView2.text = dataReceived2 ?: "No data received"
 
         val dataReceived3 = intent.getStringExtra("input3")
-
         binding.imageView.setImageResource(R.drawable.android_image_2)
-        //= dataReceived3 ?: "No data received"
+
 
         binding.imageView.setOnClickListener {
             val returnIntent = Intent().apply {
