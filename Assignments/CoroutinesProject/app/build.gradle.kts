@@ -9,11 +9,11 @@ android {
         viewBinding=true
     }
 
-    namespace = "com.example.recycleviewwithintentproject"
+    namespace = "com.example.coroutinesproject"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.recycleviewwithintentproject"
+        applicationId = "com.example.coroutinesproject"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -50,4 +50,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+
+
 }

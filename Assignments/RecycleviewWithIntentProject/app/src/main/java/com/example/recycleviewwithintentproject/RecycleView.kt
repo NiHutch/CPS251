@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleviewwithintentproject.databinding.CardLayoutBinding
 
-
 class RecyclerAdapter(private val viewModel: MainViewModel) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: CardLayoutBinding) :
@@ -21,7 +20,8 @@ class RecyclerAdapter(private val viewModel: MainViewModel) : RecyclerView.Adapt
                     val intent = Intent(v.getContext(), SecondActivity::class.java).apply {
                         putExtra("input1", binding.itemTitle.text.toString())
                         putExtra("input2", binding.itemDetail.text.toString())
-                        putExtra("input3", binding.itemImage.toString())            }
+                        putExtra("input3", binding.itemImage.toString())
+                    }
                     v.getContext().startActivity(intent);
                 }
             }
